@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>StudyMate</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app">
+    <header>
+      <h1>StudyMate</h1>
+      <div class="controls">
+        <input id="search" class="search" placeholder="Search tasks..." />
+        <button id="newBtn" class="btn small">+ New Task</button>
+      </div>
+
+      <!-- Progress Tracker -->
+      <div class="progress-container">
+        <div class="progress-bar" id="progressBar"></div>
+      </div>
+      <div class="progress-label" id="progressLabel">0% completed</div>
+    </header>
+
+    <main><div id="board" class="board"></div></main>
+
+    <div class="footer">
+      <div class="hint"></div>
+      <div><button id="clearBtn" class="btn secondary small">Clear All</button></div>
+    </div>
+  </div>
+
+  <!-- Modal -->
+  <div id="modal" style="display:none" class="modal-backdrop">
+    <div class="modal">
+      <form id="taskForm">
+        <h3 id="modalTitle">New Task</h3>
+
+        <label>Title <input id="title" type="text" required /></label>
+        <div class="row">
+          <label style="flex:1">Subject <input id="subject" type="text" /></label>
+          <label style="width:120px">Time <input id="time" type="time" /></label>
+        </div>
+
+        <label>Deadline <input id="deadline" type="date" /></label>
+
+        <label>Notes <textarea id="notes"></textarea></label>
+
+        <label>Handouts File (PDF, DOCX, etc.)
+          <input id="handoutsFile" type="file" accept=".pdf,.doc,.docx,.ppt,.txt,.jpg,.png" />
+        </label>
+
+        <label>Day
+          <select id="daySelect">
+            <option value="mon">Monday</option>
+            <option value="tue">Tuesday</option>
+            <option value="wed">Wednesday</option>
+            <option value="thu">Thursday</option>
+            <option value="fri">Friday</option>
+            <option value="sat">Saturday</option>
+            <option value="sun">Sunday</option>
+          </select>
+        </label>
+
+        <label>Color (subject color)</label>
+        <div style="display:flex;gap:8px;margin-top:6px;margin-bottom:8px" id="colorContainer"></div>
+
+        <div style="display:flex;gap:8px;justify-content:flex-end;margin-top:12px">
+          <button type="button" id="cancelBtn" class="btn secondary">Cancel</button>
+          <button type="submit" class="btn">Save Task</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
