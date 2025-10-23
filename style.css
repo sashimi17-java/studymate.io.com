@@ -2,7 +2,7 @@
   --bg: #dcd0ff;
   --card: #8f99fb;
   --muted: #6b7280;
-  --accent: #f3c3c5;
+  --accent: #8f99fb;
   --gap: 12px;
 }
 
@@ -177,6 +177,7 @@ textarea { min-height: 80px; }
   margin-top: 4px;
   color: var(--muted);
 }
+
 
 
 
