@@ -1,8 +1,8 @@
 :root {
   --bg: #fadad9;
-  --card: #e0959c;
+  --card: #e9abae;
   --muted: #6b7280;
-  --accent: #8f99fb;
+  --accent: #f3c3c5;
   --gap: 12px;
 }
 
@@ -177,9 +177,3 @@ textarea { min-height: 80px; }
   margin-top: 4px;
   color: var(--muted);
 }
-
-
-
-
-
-
